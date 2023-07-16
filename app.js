@@ -20,7 +20,7 @@ app.use('/api/v1/products', PrduuctsRouter)
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 
-const port = 5000
+const port = process.env.PORT || 5000
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URL);
